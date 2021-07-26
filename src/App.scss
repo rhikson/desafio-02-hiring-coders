@@ -1,0 +1,170 @@
+$primary: #de1b79;
+$secondary: #152742;
+$white: #ffffff;
+$gray: #F8F8FA;
+$gray-500: #747286;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: none;
+  outline: none;
+  list-style: none;
+  text-decoration: none;
+  font-family: 'Lato', sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: $white;
+}
+
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+button, .cta {
+  display: inline-block;
+  height: 5.2rem;
+  line-height: 5.2rem;
+  background-color: $primary;
+  border-radius: 6px;
+  padding: 0 5rem;
+  font-weight: bold;
+  font-size: 1.6rem;
+  color: $white;
+  cursor: pointer;
+  transition: all 0.3s;
+
+  &:hover {
+    background-color: darken($primary, 10);
+  }
+}
+
+header {
+  padding: 3.2rem 0;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .cta {
+    margin: 0 1.6rem;
+  }
+}
+
+h2 {
+  font-size: 2.4rem;
+  color: $secondary;
+  margin: 3.2rem 0;
+}
+
+table {
+  background-color: $gray;
+  color: $secondary;
+  box-shadow: 0 15px 30px 0 rgba(48,54,77,0.1);
+  
+  th {
+    font-size: 1.4rem;
+    opacity: 0.7;
+  }
+  
+  th,
+  td {
+    padding: 1rem;
+    text-align: center;
+  }
+  
+  td {
+    font-size: 1.4rem;
+  }
+}
+
+form {
+  position: relative;
+  background-color: $gray;
+  padding: 4rem 2rem 2rem;
+  min-width: 300px;
+
+  .close {
+    color: $gray-500;
+    font-size: 1.2rem;
+    position: absolute;
+    top: 1rem;
+    right: 2rem;
+    transition: all 0.3s;
+    cursor: pointer;
+
+    :hover {
+      cursor: pointer;
+      color: $primary;
+      opacity: 0.8;
+    }
+  }
+
+  .form-group {
+    display: flex;
+    flex-direction: column;
+  }
+
+  button {
+    width: 100%;
+  }
+}
+
+input {
+  color: lighten($secondary, 10);
+  border-radius: 6px;
+  height: 4.2rem;
+  outline: none;
+  padding: 1.6rem;
+  margin-bottom: 0.8rem;
+
+  :focus {
+    border: 1px solid $primary;
+  }
+}
+
+.field-error {
+  color: $primary;
+  font-size: 1rem;
+  margin-bottom: 0.8rem;
+}
+
+.modal {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  min-width: 100%;
+  min-height: 100%;
+  background: rgba($secondary, 0.5);
+}
+
+.add {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 5.2rem;
+  border-radius: 0;
+  background-color: #16233a;
+
+  :hover {
+    background-color: #273957;
+  }
+}
